@@ -1,0 +1,1 @@
+You need to change the path of database connection in class_admin.php and class_frontend.php
