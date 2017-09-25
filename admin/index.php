@@ -1,6 +1,5 @@
 <?php
-require '../php_library/class_admin.php';
-
+require(dirname(__DIR__).'/php_library/class_admin.php');
 session_start();
 if(!isset($_SESSION['username']) ){
     if(!isset($_COOKIE['username'])){
@@ -26,7 +25,7 @@ include 'header.php';
         <div class="panel-body">
             <ul>
                 <?php while($folder = $all_folder->fetch_assoc()) {?>
-                <li><a href="view_folder.php?id=<?php echo $folder['id'] ?>"><?php echo $folder['folder_name'] ?></a></li>
+                <li><a href="/admin/view_folder.php?id=<?php echo $folder['id'] ?>"><?php echo $folder['folder_name'] ?></a></li>
                 <?php } ?>
             </ul>
         </div>
@@ -40,7 +39,7 @@ include 'header.php';
             <input type="submit" name="submit" class="btn btn-success" value="create folder">
         </div>
     </form>
-    <h1><a href="new_post.php" class="btn btn-lg btn-primary">Create a New Post</a></h1>
+    <h1><a href="/admin/new_post.php" class="btn btn-lg btn-primary">Create a New Post</a></h1>
 </div>
 
 <footer class="blog-footer">

@@ -30,7 +30,7 @@ if(isset($_SESSION['username'])){
                 <span class="icon-bar"></span>
             </button>
 
-            <a href="home.php" class="navbar-brand">Note Khata</a>
+            <a href="/index.php" class="navbar-brand">Note Khata</a>
         </div>
         <!-- end navbar-header -->
         <?php if(!isset($nav)){
@@ -38,15 +38,15 @@ if(isset($_SESSION['username'])){
         } ?>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="<?php if($nav == 'home') echo 'active'?>"><a href="home.php">Home</a></li>
-                <li class="<?php if($nav == 'about') echo 'active'?>"><a href="about.php">About</a></li>
+                <li class="<?php if($nav == 'home') echo 'active'?>"><a href="/index.php">Home</a></li>
+                <li class="<?php if($nav == 'about') echo 'active'?>"><a href="/frontend/about.php">About</a></li>
                 <li class="<?php if($nav == 'contact') echo 'active'?>"><a href="">Contact</a></li>
                 <?php 
 
                 if($admin){
                     echo "<li><a href='../admin'>Dashboard</a></li>";
                 }else{
-                    echo "<li><a href='login_page.php'>Login</a></li>";
+                    echo "<li><a href='/frontend/login_page.php'>Login</a></li>";
                 }
 
                  ?>

@@ -1,6 +1,6 @@
 <?php
 	//change this location
-	require 'C:/xampp/htdocs/sandbox/php/oop_blog/php_library/db.php';
+require(dirname(__DIR__).'/php_library/db.php');
 	class Admin {
 		public $db;
 		public function __construct(){
@@ -23,7 +23,7 @@
 			if(!empty($folder_name)){
 				$sql = "INSERT INTO folder(folder_name) VALUES ('$folder_name')";
 				if($this->db->con->query($sql)){
-					header('Location: home.php');
+					header('Location: /');
 				}
 			}
 		}

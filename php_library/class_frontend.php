@@ -1,6 +1,7 @@
 <?php
 //change this location
-require 'C:/xampp/htdocs/sandbox/php/oop_blog/php_library/db.php';
+// require 'C:/xampp/htdocs/sandbox/php/oop_blog/php_library/db.php';
+require(dirname(__DIR__).'/php_library/db.php');
 class Frontend {
     public $db;
     public function __construct(){

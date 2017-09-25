@@ -1,5 +1,5 @@
  <?php
- require '../php_library/class_frontend.php';
+  require(dirname(__DIR__).'/php_library/class_frontend.php');
 	$obj = new Frontend();
 	$posts = $obj-> select_all_from_post();
     $nav = 'home';
@@ -11,11 +11,11 @@
 			<?php while($post = $posts->fetch_assoc()){ ?>
                 <div class="blog-post">
                     <h2 class="blog-post-title">
-                        <a href= "post.php?id=<?php echo $post['id'] ;?>"><?php   echo $post['title'] ?></a>
+                        <a href= "/frontend/post.php?id=<?php echo $post['id'] ;?>"><?php   echo $post['title'] ?></a>
                     </h2>
-                    <p class="blog-post-meta"><?php  echo $obj->blog_time_format( $post['date'] ) ?>  by <a href="author.php?id=<?php echo $post['user_id'] ?>"> <?php echo $obj->user_name_by_user_id($post['user_id'])  ?> </a></p>
+                    <p class="blog-post-meta"><?php  echo $obj->blog_time_format( $post['date'] ) ?>  by <a href="/frontend/author.php?id=<?php echo $post['user_id'] ?>"> <?php echo $obj->user_name_by_user_id($post['user_id'])  ?> </a></p>
                     <p> <?php  echo $obj->read_more( $post['post'] ) ?>  </p>
-					<P> <a href= "post.php?id=<?php echo $post['id'] ;?>" class="btn btn-success"> Readmore </a> </P>
+					<P> <a href= "/frontend/post.php?id=<?php echo $post['id'] ;?>" class="btn btn-success"> Readmore </a> </P>
                 </div><!-- /.blog-post -->
 				<br>
 				<br>
@@ -25,7 +25,7 @@
             <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
               <div class="sidebar-module sidebar-module-inset">
                 <h4>Don't have Account</h4>
-                <a class="btn btn-primary btn-lg" href="registration_page.php">Register Here</a><br>
+                <a class="btn btn-primary btn-lg" href="/frontend/registration_page.php">Register Here</a><br>
               </div>
                 <?php include 'sidebar.php' ;?>
             </div><!-- /.blog-sidebar -->
@@ -34,7 +34,7 @@
     <footer class="blog-footer">
         <p>Blog created by Pervez, Papia, Israt, Mousumi, Polo.</p>
         <p>
-        <p>Already have account <a href="login_page.php">Login Here</a></p>
+        <p>Already have account <a href="/frontend/login_page.php">Login Here</a></p>
         <a href="#">Back to top</a>
         </p>
     </footer>

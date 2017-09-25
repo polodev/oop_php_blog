@@ -1,9 +1,11 @@
 <?php
-require '../php_library/class_admin.php';
+require(dirname(__DIR__).'/php_library/class_admin.php');
+
 session_start();
 if(!isset($_SESSION['username']) ){
     if(!isset($_COOKIE['username'])){
-        header('Location: ../frontend/login_page.php') ;
+        $location = dirname(__DIR__).'/frontend/login_page.php';
+        header("Location: $location") ;
     }
 }
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : $_COOKIE['username'];
@@ -17,7 +19,7 @@ if(isset($_POST['submit'])){
         $message = $post->insert_into_post($_POST);
     }
 }
-include 'header.php';
+require(dirname(__DIR__).'/admin/header.php');
 ?>
 <div class="container">
     <div class="panel panel-default">

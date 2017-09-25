@@ -1,5 +1,5 @@
  <?php
- require '../php_library/class_frontend.php';
+  require(dirname(__DIR__).'/php_library/class_frontend.php');
 	$obj = new Frontend();
 	$posts = $obj-> select_all_from_post();
  $nav = 'about';

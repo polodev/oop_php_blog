@@ -1,9 +1,9 @@
 <?php
 session_start();
 if(isset($_SESSION['username']) || isset($_COOKIE['username'])){
-    header('Location: ../admin/home.php') ;
+    header("Location: ../admin/") ;
 }
-include "../php_library/class_frontend.php";
+require(dirname(__DIR__).'/php_library/class_frontend.php');
 $user = new Frontend();
 if(isset($_POST['submit'])){
   if(isset($_POST['remember_me'])){
@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
        if($check === 1){
            $user = $_POST['username'];
            $_SESSION['username'] = $user;           
-           header('Location: ../admin/home.php');
+           header('Location: ../admin');
        }else{
            $message = $check;
        }

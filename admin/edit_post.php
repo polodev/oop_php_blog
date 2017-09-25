@@ -1,5 +1,6 @@
 <?php
-require '../php_library/class_admin.php';
+require(dirname(__DIR__).'/php_library/class_admin.php');
+
 $post_id = $_GET['id'];
 session_start();
 if(!isset($_SESSION['username']) ){

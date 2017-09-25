@@ -1,6 +1,6 @@
 <?php
 
-include '../php_library/class_frontend.php';
+  require(dirname(__DIR__).'/php_library/class_frontend.php');
 $obj = new Frontend;
 	if(isset($_POST['submit'])){
 		if(isset($_POST['first_name']) && $_POST['last_name'] && $_POST['date_of_birth'] && $_POST['username'] && $_POST['password'] && $_POST['c_password'] ){

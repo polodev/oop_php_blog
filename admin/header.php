@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a href="home.php" class="navbar-brand">Admin Dashboard</a>
+            <a href="/admin" class="navbar-brand">Admin Dashboard</a>
         </div>
         <!-- end navbar-header -->
 
@@ -35,9 +35,9 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php $username = isset($_SESSION['username']) ?  $_SESSION['username'] : $_COOKIE['username'] ; echo $username; ?> <strong class="caret"></strong></a>
                     <ul class="dropdown-menu">
-                        <li> <a target="_blank" href="../frontend/home.php">View Blog</a> </li>
+                        <li> <a target="_blank" href="/">View Blog</a> </li>
                         <li class="divider"></li>
-                        <li> <a href="logout.php">Logout</a> </li>
+                        <li> <a href="/admin/logout.php">Logout</a> </li>
                     </ul>
                     <!-- end dropdown-menu -->
                 </li>

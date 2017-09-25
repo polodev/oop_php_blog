@@ -1,5 +1,5 @@
 <?php
-require '../php_library/class_frontend.php';
+  require(dirname(__DIR__).'/php_library/class_frontend.php');
 $id = 1;
 if(isset($_GET['id'])){
     $id = $_GET['id'];
